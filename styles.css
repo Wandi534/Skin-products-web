@@ -218,3 +218,111 @@ a:hover {
         text-align: center;
     }
 }
+
+/* 4. ABOUT SECTION */
+.about {
+    padding: 6rem 0;
+    background-color: var(--color-background-card);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.about-story-grid {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 5rem;
+}
+
+.about-visual {
+    flex: 0 0 40%;
+    max-width: 45%;
+    padding-right: 1.5rem;
+}
+
+.about-visual img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    flex: 1;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.about-content .subtitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-primary-soft);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+/* --- Values Grid Section --- */
+.about-values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+    padding-top: 3rem;
+    border-top: 1px solid var(--color-accent-sand); 
+}
+
+.value-card {
+    padding: 20px;
+    background-color: var(--color-background-main); 
+    border-radius: 8px;
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.value-card h3 {
+    color: var(--color-secondary-deep);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    .about-story-grid {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .about-values-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-content {
+        text-align: center;
+        padding: 0 1.5rem;
+    }
+}
