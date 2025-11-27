@@ -1,1 +1,11 @@
 /*GLOBAL AND TYPOGRAPHY STYLES*/
+:root {
+    --color-primary: #4f6f52;
+    --color-secondary: #3E5B43;
+    --color-background-main: #E8EFE8;
+    --color-background-card: #FFFFFF;
+    --color-text: #2E2E2E;
+    --color-accent-beige: #E8E1D3;
+    --font-serif: 'Georgia', serif;
+    --font-sans: 'Helvetica Neue', Helvetica, sans-serif;
+}
