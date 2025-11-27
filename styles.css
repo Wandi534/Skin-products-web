@@ -188,7 +188,7 @@ a:hover {
 @media (max-width: 1024px) {
     .hero-container {
         flex-direction: column; 
-        min-height: auto;
+        min-height: unset;
     }
 
     .hero-text-content {
