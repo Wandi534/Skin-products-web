@@ -310,6 +310,149 @@ a:hover {
     margin-bottom: 0.5rem;
 }
 
+/* --- Featured Products --- */
+.featured-products {
+    padding: 6rem 0;
+    background: transparent;
+    text-align: left;
+}
+
+.featured-products h2 {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-secondary-deep);
+}
+
+.featured-products .section-subtext {
+    color: var(--color-text-soft);
+    margin-bottom: 1.5rem;
+}
+
+/* Ensure heading and subtext span full width of the grid */
+.featured-products h2,
+.featured-products .section-subtext {
+    grid-column: 1 / -1;
+    justify-self: start;
+}
+
+/* Make sure the grid creates a gap row between header and product cards */
+.featured-products > .container {
+    padding-top: 0.5rem;
+}
+
+/* Use the container directly under featured-products as a flexible grid */
+.featured-products > .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 2rem;
+    align-items: start;
+}
+
+.featured-products .product-card {
+    background: var(--color-background-card);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 8px 24px rgba(18, 30, 25, 0.04);
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-self: center; /* center each card inside its grid cell */
+}
+
+.featured-products .product-card img {
+    width: 170px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+}
+
+.featured-products .product-card h3 {
+    font-size: 1.1rem;
+    margin: 0.35rem 0;
+    color: var(--color-secondary-deep);
+}
+
+.featured-products .tagline {
+    color: var(--color-text-soft);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.featured-products .price {
+    font-weight: 700;
+    color: var(--color-secondary-deep);
+    margin-bottom: 0.75rem;
+}
+
+.cta-small {
+    display: inline-block;
+    background-color: var(--color-primary-soft);
+    color: var(--color-background-card);
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+
+.cta-small:hover {
+    background-color: var(--color-secondary-deep);
+}
+
+.featured-products .load-full-shop {
+    display: block;
+    width: max-content;
+    margin: 2rem auto 0;
+    grid-column: 1 / -1; /* span all columns */
+    justify-self: center;
+}
+
+.brand-highlight {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--color-background-main);
+    border-radius: 10px;
+    text-align: center;
+    grid-column: 1 / -1; /* keep highlight spanning full width */
+}
+
+.secondary-cta-small {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 2px solid var(--color-secondary-deep);
+    color: var(--color-secondary-deep);
+    background: transparent;
+    margin-top: 0.6rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    /* Make the featured list horizontally scrollable on small screens */
+    .featured-products > .container {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(260px, 86%);
+        gap: 1rem;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .featured-products .product-card {
+        flex: none;
+        max-width: none;
+        width: 100%;
+    }
+
+    .featured-products .product-card img {
+        width: 180px;
+    }
+}
+
 /* CSS icons for Values */
 .value-icon {
     width: 72px;
