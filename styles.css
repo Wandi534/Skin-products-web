@@ -1,0 +1,220 @@
+/*1.GLOBAL AND TYPOGRAPHY STYLES*/
+:root {
+    --color-primary-soft: #A2C4A0;     
+    --color-secondary-deep: #6B8E68;  
+    --color-background-main: #F4FAF7;   
+    --color-background-card: #FFFFFF;   
+    --color-text-soft: #4F5E4D;         
+    --color-accent-sand: #E7DED3;
+    --font-serif: 'Lora', serif; 
+    --font-sans: 'Open Sans', sans-serif;
+}
+
+/* Reset for clean styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles*/
+body {
+    font-family: var(--font-sans);
+    line-height: 1.7; 
+    color: var(--color-text-soft);
+    background-color: var(--color-background-main);
+    padding-top: 80px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    color: var(--color-secondary-deep);
+    margin-bottom: 0.5em;
+    font-weight: 300; 
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secondary-deep);
+    transition: color 0.3s;
+}
+
+/* Base Link Hover */
+a:hover {
+    color: var(--color-primary-soft);
+}
+
+
+/* 2. Navigation Bar (NAV)*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: var(--color-background-card);
+    border-bottom: 2px solid var(--color-accent-sand); 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-family: var(--font-serif);
+    font-weight: bold;
+    color: var(--color-secondary-deep);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 5px 0;
+    color: var(--color-text-soft);
+}
+
+.navbar ul li a:hover {
+    color: var(--color-secondary-deep);
+    border-bottom: 2px solid var(--color-primary-soft);
+}
+
+
+/* 3. Hero Section  */
+.hero {
+    padding: 0; 
+    background-color: var(--color-background-card);
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.05); 
+}
+
+.hero-container {
+    display: flex; 
+    align-items: center; 
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 80vh; 
+}
+
+.hero-text-content {
+    flex: 1; 
+    padding: 6rem 4rem;
+    text-align: left; 
+}
+
+.hero-visual-content {
+    flex: 1.2; 
+    text-align: right; 
+    padding: 2rem;
+}
+
+.hero-visual-content img {
+    max-width: 100%; 
+    max-height: 70vh; 
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    border-radius: 10px; 
+}
+/* Headline Styling */
+.hero h1 {
+    font-size: 3.8rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--color-secondary-deep);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    max-width: 550px;
+    font-style: italic; 
+}
+
+/* CTA Buttons Styling  */
+.hero-cta-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+} 
+
+.cta {
+    background-color: var(--color-primary-soft); 
+    color: var(--color-background-card); 
+    border: none;
+    padding: 15px 30px; 
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 30px; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta:hover {
+    background-color: var(--color-secondary-deep);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-cta {
+    background: none;
+    border: 2px solid var(--color-secondary-deep);
+    color: var(--color-secondary-deep);
+    padding: 15px 30px; 
+    font-size: 0.95rem; 
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.secondary-cta:hover {
+    background-color: var(--color-accent-sand); 
+    color: var(--color-text-soft);
+}
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column; 
+        min-height: auto;
+    }
+
+    .hero-text-content {
+        padding: 4rem 1.5rem 1rem;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero-visual-content {
+        padding: 1rem 1.5rem 4rem;
+    }
+    
+    .hero-cta-group {
+        justify-content: center; 
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-cta-group {
+        flex-direction: column;
+    }
+    .cta, .secondary-cta {
+        width: 100%;
+        text-align: center;
+    }
+}
